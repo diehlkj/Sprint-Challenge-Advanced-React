@@ -125,14 +125,34 @@ table {
 * {
   box-sizing: border-box;
 }
-.card-list {
+body {
+  background: #fff;
+}
+body .top-bar {
   width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .top-bar .dark-button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 5px solid #161616;
+  border-radius: 100%;
+}
+body .card-list {
+  width: 100%;
+  padding-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
-.card-list .player-card {
+body .card-list .player-card {
   padding: 15px;
   margin: 0 5px 10px 5px;
   background: #fff;
@@ -141,18 +161,37 @@ table {
   font-family: sans-serif;
   color: #000;
 }
-.card-list .player-card h1 {
+body .card-list .player-card h1 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 4px;
 }
-.card-list .player-card h2 {
+body .card-list .player-card h2 {
   font-size: 14px;
   margin-bottom: 15px;
   font-style: italic;
   color: #777777;
 }
-.card-list .player-card p {
+body .card-list .player-card p {
   font-size: 16px;
   text-decoration: underline;
+}
+.dark-mode .top-bar {
+  background: #161616;
+  border-bottom: 1px solid #fff;
+}
+.dark-mode .top-bar .dark-button.active {
+  background: #161616;
+  border: 5px solid #fff;
+}
+.dark-mode .card-list {
+  background: #161616;
+}
+.dark-mode .card-list .player-card {
+  background: #2d2d2d;
+  border: 1px solid #dfdfdf;
+  color: #ffffff;
+}
+.dark-mode .card-list .player-card h2 {
+  color: #777777;
 }

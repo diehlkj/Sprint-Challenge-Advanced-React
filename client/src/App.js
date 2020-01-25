@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import TopBar from './components/TopBar';
 import CardList from './components/CardList'
 import './assets/css/index.css';
 
@@ -18,10 +19,11 @@ class App extends React.Component {
       .then(res => this.setState({playerList: res.data}))
   
   }
-  
+
   render() {
       return (
         <div className="App">
+          <TopBar />
           <CardList players={this.state.playerList} />
         </div>
       );
